@@ -7,12 +7,12 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className='grid-system'>
       <Nav />
       <Header />
-      <Main />
-      <Footer />
-    </>
+      {/* <Main />
+      <Footer /> */}
+    </div>
   );
 }
 

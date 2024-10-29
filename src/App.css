@@ -1,0 +1,7 @@
+.grid-3-system {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(0, 900px) minmax(20px, 1fr);
+  grid-column-gap: 20px;
+  grid-template-areas: ". wrapper .";
+}

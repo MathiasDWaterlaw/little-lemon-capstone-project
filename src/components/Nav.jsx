@@ -1,29 +1,47 @@
 import logo from "../assets/logo/Logo.svg";
+import menuIcon from "../assets/icons/icon _hamburger menu.svg";
+import "./Nav.css";
+
+import { useState } from "react";
+
+export const navLinks = [
+  { id: "home", text: "Home", link: "#" },
+  { id: "about", text: "About", link: "#" },
+  { id: "menu", text: "Menu", link: "#" },
+  { id: "reservation", text: "Reservation", link: "#" },
+  { id: "order-online", text: "Order Online", link: "#" },
+  { id: "login", text: "Login", link: "#" },
+];
 
 export default function Nav() {
+
+  
+
   return (
-    <nav>
-      <img src={logo} />
-      <ul>
-        <li id='home'>
-          <a href=''>HOME</a>
-        </li>
-        <li id='about'>
-          <a href=''>ABOUT</a>
-        </li>
-        <li id='menu'>
-          <a href=''>MENU</a>
-        </li>
-        <li id='reservation'>
-          <a href=''>RESERVATION</a>
-        </li>
-        <li id='order-online'>
-          <a href=''>ORDER ONLINE</a>
-        </li>
-        <li id='login'>
-          <a href=''>LOGIN</a>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav className='desk-nav-bar grid-3-system'>
+        <div className='wrapper'>
+          <img src={logo} alt='logo' />
+          <ul>
+            {navLinks.map((item) => {
+              return (
+                <li id={item.id}>
+                  <a href={item.link}>{item.text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </nav>
+
+      <nav className='mobile-nav-bar grid-3-system'>
+        <div className='wrapper'>
+          <img src={logo} alt='logo' />
+          <i className='ham-icon' onClick={}>
+            <img src={menuIcon} alt='menu-icon' />
+          </i>
+        </div>
+      </nav>
+    </>
   );
 }
