@@ -1,10 +1,7 @@
 footer {
-  width: 100%;
-  display: grid;
-  grid-template-columns: minmax(20px, 1fr) minmax(0, 900px) minmax(20px, 1fr);
-  grid-column-gap: 20px;
-  grid-template-areas: ". content .";
-  /* border: 1px dotted black; */
+  padding: 2rem 0;
+  background-color: hsla(160, 13%, 33%, 0.05);
+  margin-top: 4rem;
 }
 
 footer div {
@@ -14,4 +11,25 @@ footer div {
   align-items: start;
   justify-content: space-between;
   /* border: 3px dotted blue; */
+}
+
+footer img {
+  width: 120px;
+}
+
+footer li {
+  padding-bottom: 10px;
+}
+
+footer a {
+  color: var(--LL-Black);
+}
+
+@media (width <= 576px) {
+  footer img {
+    width: 80px;
+  }
+  #doormat-navigation {
+    display: none;
+  }
 }

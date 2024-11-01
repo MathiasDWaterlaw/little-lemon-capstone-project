@@ -1,5 +1,6 @@
 import "./Header.css";
 import image from "../assets/images/restauranfood.jpg";
+import Button from "./Button";
 
 export default function Header() {
   return (
@@ -12,7 +13,7 @@ export default function Header() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button className='btn hero-btn'>Reserve a Table</button>
+          <Button>Reserve a Table</Button>
         </div>
         <img src={image} alt='restaurant food' />
       </div>

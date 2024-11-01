@@ -18,8 +18,8 @@ const contactLinks = {
 
 export default function Footer() {
   return (
-    <footer>
-      <div>
+    <footer className='grid-3-system'>
+      <div className='wrapper'>
         <img src={footerLogo} />
 
         <ul id='doormat-navigation'>

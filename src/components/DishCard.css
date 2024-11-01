@@ -1,0 +1,61 @@
+.dish-card {
+  border-radius: 16px;
+  background-color: white;
+  height: 400px;
+  box-shadow: 0px 5px 20px 0px hsla(0, 0%, 0%, 0.15);
+  width: 270px;
+  min-width: 250px;
+}
+
+.card-hero img {
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  /* height: auto;
+  max-height: 166.47px; */
+  aspect-ratio: 3/2;
+}
+
+img.icon {
+  width: 25px;
+}
+
+div.card-body {
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  height: 219.53px;
+}
+
+div.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  /* border: 1px solid red; */
+}
+
+h3.h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+p.price {
+}
+
+p.card-description {
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+a.card-footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--LL-Green);
+}

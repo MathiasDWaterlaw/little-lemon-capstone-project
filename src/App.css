@@ -5,3 +5,7 @@
   grid-column-gap: 20px;
   grid-template-areas: ". wrapper .";
 }
+
+.wrapper {
+  grid-area: wrapper;
+}

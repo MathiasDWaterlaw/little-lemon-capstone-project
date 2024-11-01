@@ -5,15 +5,15 @@ header {
 }
 
 header .wrapper {
-  grid-area: wrapper;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 header img {
-  max-width: 280px;
+  max-width: 380px;
   border-radius: 10px;
+  aspect-ratio: 1/1;
 }
 
 header .hero-description {
@@ -38,21 +38,6 @@ header p {
   color: white;
   font-weight: 300;
   margin: 2rem 0 3rem 0;
-}
-
-header button {
-  padding: 0.7rem 1rem;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--LL-Yellow);
-  font-weight: 500;
-  color: #333333;
-}
-
-header button:hover {
-  background-color: #edefee;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 @media (width <= 768px) {
