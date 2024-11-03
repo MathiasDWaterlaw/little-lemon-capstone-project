@@ -1,5 +1,6 @@
 import footerLogo from "../assets/logo/footer_logo.png";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 import { navLinks } from "./Nav";
 
@@ -26,7 +27,7 @@ export default function Footer() {
           {navLinks.map((item) => {
             return (
               <li id={item.id}>
-                <a href={item.link}>{item.text}</a>
+                <Link to={item.link}>{item.text}</Link>
               </li>
             );
           })}

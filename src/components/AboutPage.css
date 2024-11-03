@@ -1,0 +1,84 @@
+main#about {
+  margin-top: 3rem;
+}
+
+main#about div.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main#about div.description-container {
+  width: 300px;
+}
+
+main#about p {
+  margin: 1.5rem 0;
+}
+
+main#about div.images-container {
+  width: 380px;
+  object-fit: scale-down;
+  position: relative;
+  height: 500px;
+}
+
+main#about img {
+  max-width: 220px;
+  aspect-ratio: 2/3;
+  border-radius: 16px;
+  position: absolute;
+  box-shadow: 0px 5px 20px 0px hsla(0, 0%, 0%, 0.15);
+}
+
+main#about img.marioAdrianA {
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+main#about img.marioAdrianB {
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@media (width <= 768px) {
+  main#about div.wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  main#about div.images-container {
+    width: 400px;
+    margin-top: 2rem;
+  }
+}
+
+@media (width <= 576px) {
+  main#about div.images-container {
+    width: 350px;
+    margin-top: 2rem;
+  }
+
+  main#about img {
+    max-width: 200px;
+    aspect-ratio: 2/3;
+    border-radius: 16px;
+    position: absolute;
+  }
+}
+
+@media (width <= 476px) {
+  main#about div.images-container {
+    width: 300px;
+    margin-top: 2rem;
+  }
+
+  main#about img {
+    max-width: 200px;
+    aspect-ratio: 2/3;
+    border-radius: 16px;
+    position: absolute;
+  }
+}

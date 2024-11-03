@@ -1,3 +1,15 @@
+nav,
+div.sticky-container {
+  position: sticky;
+  background-color: var(--LL-White);
+  top: 0;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  z-index: 2;
+  box-shadow: 0px 15px 10px -15px hsla(0, 0%, 0%, 0.1);
+}
+
 nav.mobile-nav-bar {
   display: none;
 }

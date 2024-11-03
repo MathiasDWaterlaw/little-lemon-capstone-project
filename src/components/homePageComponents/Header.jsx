@@ -1,5 +1,5 @@
 import "./Header.css";
-import image from "../assets/images/restauranfood.jpg";
+import image from "../../assets/images/restauranfood.jpg";
 import Button from "./Button";
 
 export default function Header() {

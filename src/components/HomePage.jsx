@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "./homePageComponents/Header";
 
 import SpecialsSection from "./homePageComponents/SpecialsSection";
 import TestimonialSection from "./homePageComponents/TestimonialSection";

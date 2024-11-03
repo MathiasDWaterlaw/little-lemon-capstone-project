@@ -1,0 +1,19 @@
+#template #header {
+  background-color: var(--LL-Green);
+  height: 50vh;
+}
+
+#template div.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+#header div.wrapper {
+  color: var(--LL-White);
+}
+
+#content div.wrapper {
+  color: var(--LL-Black);
+}
