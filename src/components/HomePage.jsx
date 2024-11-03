@@ -1,9 +1,8 @@
 import Header from "./Header";
-import Button from "./Button";
-import "./HomePage.css";
 
-import DishCard from "./homePageComponents/DishCard";
-import TestimonialCard from "./homePageComponents/TestimonialCard";
+import SpecialsSection from "./homePageComponents/SpecialsSection";
+import TestimonialSection from "./homePageComponents/TestimonialSection";
+import AboutSection from "./homePageComponents/AboutSection";
 
 import greekSalad from "../assets/images/greek salad.jpg";
 import bruschetta from "../assets/images/bruchetta.svg";
@@ -13,9 +12,6 @@ import deniz from "../assets/images/deniz.png";
 import jon from "../assets/images/jon.png";
 import olivia from "../assets/images/Olivia.png";
 import sara from "../assets/images/sara.png";
-
-import marioAdrianA from "../assets/images/Mario and Adrian A.jpg";
-import marioAdrianB from "../assets/images/Mario and Adrian b.jpg";
 
 const dishList = [
   {
@@ -70,79 +66,11 @@ const testimonialList = [
 
 export default function HomePage() {
   return (
-    <div id='home-page'>
+    <main id='home-page'>
       <Header />
-      <main>
-        <section id='week-specials' className='grid-3-system'>
-          <div className='wrapper'>
-            <div className='section-header'>
-              <h2 className='h2 markazi'>This week's Specials</h2>
-              <Button>Online Menu</Button>
-            </div>
-
-            <div className='dish-card-container'>
-              {dishList.map((dish) => {
-                return (
-                  <DishCard
-                    img={dish.img}
-                    name={dish.name}
-                    description={dish.description}
-                    price={dish.price}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section id='testimonials' className='grid-3-system'>
-          <div className='wrapper'>
-            <div className='section-header'>
-              <h2 className='h2 markazi'>Testimonials</h2>
-            </div>
-
-            <div className='testimonials-card-container'>
-              {testimonialList.map((item) => {
-                return (
-                  <TestimonialCard
-                    profilePic={item.img}
-                    name={item.name}
-                    nickname={item.nickname}
-                    review={item.review}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section id='about' className='grid-3-system'>
-          <div className='wrapper'>
-            <div className='description-container'>
-              <h2 className='h2 markazi'>Little Lemon</h2>
-              <h3 className='h3 markazi'>Chicago</h3>
-              <p>
-                Little Lemon is a charming neighborhood bistro that serves
-                simple food and classic cocktails in a lively but casual
-                environment. The restaurant features a locally-sourced menu with
-                daily specials.
-              </p>
-            </div>
-            <div className='images-container'>
-              <img
-                src={marioAdrianA}
-                alt='Mario and Adrian'
-                className='marioAdrianA'
-              />
-              <img
-                src={marioAdrianB}
-                alt='Mario and Adrian'
-                className='marioAdrianB'
-              />
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+      <SpecialsSection dishList={dishList} />
+      <TestimonialSection testimonialList={testimonialList} />
+      <AboutSection />
+    </main>
   );
 }

@@ -55,3 +55,13 @@ body {
 .markazi {
   font-family: "Markazi Text", serif;
 }
+
+header h1.h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+h2.h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
