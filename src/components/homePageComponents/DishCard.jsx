@@ -1,4 +1,4 @@
-import basketIcon from "../assets/icons/Basket.svg";
+import basketIcon from "../../assets/icons/Basket.svg";
 import "./DishCard.css";
 
 export default function DishCard({ img, name, description, price }) {

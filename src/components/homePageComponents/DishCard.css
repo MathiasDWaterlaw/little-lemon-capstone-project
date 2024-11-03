@@ -44,6 +44,7 @@ h3.h3 {
 }
 
 p.price {
+  color: orange;
 }
 
 p.card-description {
