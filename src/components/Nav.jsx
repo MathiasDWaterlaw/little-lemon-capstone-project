@@ -68,7 +68,9 @@ export default function Nav() {
               {navLinks.map((item) => {
                 return (
                   <li id={item.id}>
-                    <Link to={item.link}>{item.text}</Link>
+                    <Link to={item.link} className='link-item'>
+                      <p>{item.text}</p>
+                    </Link>
                   </li>
                 );
               })}
@@ -98,7 +100,7 @@ export default function Nav() {
                   return (
                     <li id={item.id} className='grid-3-system'>
                       <Link
-                        className='wrapper'
+                        className='wrapper link-item'
                         to={item.link}
                         onClick={() => {
                           setMobileNav(!mobileNav);

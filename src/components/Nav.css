@@ -14,6 +14,15 @@ nav.mobile-nav-bar {
   display: none;
 }
 
+li {
+  height: inherit;
+}
+
+.link-item {
+  height: inherit;
+  width: inherit;
+}
+
 .desk-nav-bar .wrapper {
   /* grid-area: wrapper; */
   width: 100%;
@@ -24,13 +33,13 @@ nav.mobile-nav-bar {
   align-items: center;
 }
 
-.desk-nav-bar a {
+.desk-nav-bar .link-item {
   text-transform: uppercase;
   text-wrap: nowrap;
   color: black;
 }
 
-.desk-nav-bar a:visited {
+.desk-nav-bar .link-item:visited {
   color: black;
 }
 
@@ -41,10 +50,9 @@ nav.mobile-nav-bar {
   height: inherit;
 }
 
-.desk-nav-bar li {
-  height: inherit;
+nav.desk-nav-bar .link-item {
   /* border: 1px dotted red; */
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +89,7 @@ nav.mobile-nav-bar div.wrapper {
   padding: 15px 0;
 }
 
-.open-nav a {
+.open-nav .link-item {
   color: var(--LL-Black);
   text-transform: uppercase;
 }

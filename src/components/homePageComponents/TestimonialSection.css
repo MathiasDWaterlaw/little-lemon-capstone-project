@@ -14,13 +14,11 @@ div.testimonials-card-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
   flex-wrap: wrap;
 }
 
-@media (width <= 992px) {
+/* @media (width <= 992px) {
   div.testimonials-card-container {
-    /* flex-direction: column; */
     justify-content: flex-start;
     align-items: center;
   }
@@ -31,4 +29,4 @@ div.testimonials-card-container {
     flex-direction: column;
     align-items: center;
   }
-}
+} */
