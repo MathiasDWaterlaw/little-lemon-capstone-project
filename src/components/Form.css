@@ -1,0 +1,82 @@
+form {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  background-color: var(--LL-Green);
+  padding: 2rem;
+  border-radius: 16px;
+  color: var(--LL-White);
+  gap: 1rem;
+  max-width: 85%;
+  margin: 3rem auto;
+}
+
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 16px;
+  background-position-y: 20px;
+  margin-top: 0.5rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input,
+select {
+  margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 1px solid lightgrey;
+  accent-color: var(--LL-Yellow);
+}
+
+#div-reservation-name {
+  grid-column: 1/-1;
+}
+
+#div-date {
+  grid-column: 1/-1;
+}
+
+div.radio-label-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+div.radio-label-box p {
+  align-self: first baseline;
+}
+
+div.radio-container {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1.2rem;
+}
+
+div.textarea-container {
+  grid-column: 1/-1;
+}
+
+textarea#special-request {
+  resize: none;
+  overflow-y: hidden;
+}
+
+button.form-btn {
+  grid-column: 1/-1;
+}
+
+@media (width <= 768px) {
+  form {
+    grid-template-columns: auto;
+    max-width: 100%;
+  }
+}
