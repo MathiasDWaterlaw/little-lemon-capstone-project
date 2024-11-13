@@ -22,7 +22,6 @@ export default function Nav() {
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      console.log(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);

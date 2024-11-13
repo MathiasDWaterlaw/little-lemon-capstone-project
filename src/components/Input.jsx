@@ -8,7 +8,7 @@ const frameError = {
   transition: { duration: 0.2 },
 };
 
-export function Input({ Id, Type, Label, Placeholder }) {
+export function Input({ Id, Type, Label, Placeholder, ...props }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (event) => {
@@ -26,6 +26,7 @@ export function Input({ Id, Type, Label, Placeholder }) {
         onChange={handleChange}
         min={1}
         placeholder={Placeholder}
+        {...props}
       />
     </div>
   );

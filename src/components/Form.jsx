@@ -1,7 +1,7 @@
 import { Input } from "./Input";
 import { useState } from "react";
 
-import "./Form.css";
+// import "./Form.css";
 
 export default function Form() {
   const [radioState, setRadioState] = useState("dinner");
