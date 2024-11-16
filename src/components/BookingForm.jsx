@@ -1,14 +1,22 @@
 import { set } from "react-hook-form";
 import "./BookingForm.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function BookingForm({ HandleChangeFunction, InputValue }) {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-    console.log([...formData.entries()]);
-  };
+export default function BookingForm({
+  HandleChangeFunction,
+  InputValue,
+  handleSubmit,
+  dispatch,
+  availableTimes,
+}) {
+  const [resDate, setDate] = useState("");
+
+  useEffect(() => {
+    dispatch({ type: "UPDATE_TIMES", date: new Date(resDate) });
+
+    console.log(resDate);
+    console.log(availableTimes.times);
+  }, [resDate]);
 
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
@@ -17,8 +25,10 @@ export default function BookingForm({ HandleChangeFunction, InputValue }) {
         name='reservation-date'
         type='date'
         id='res-date'
-        value={InputValue}
-        onChange={HandleChangeFunction}
+        value={resDate}
+        onChange={(e) => {
+          setDate(e.target.value);
+        }}
       />
 
       <label htmlFor='res-time'>Choose time</label>
@@ -28,12 +38,9 @@ export default function BookingForm({ HandleChangeFunction, InputValue }) {
         value={InputValue}
         onChange={HandleChangeFunction}
       >
-        <option value='17:00'>17:00</option>
-        <option value='18:00'>18:00</option>
-        <option value='19:00'>19:00</option>
-        <option value='20:00'>20:00</option>
-        <option value='21:00'>21:00</option>
-        <option value='22:00'>22:00</option>
+        {availableTimes.times.map((hour) => {
+          return <option value={hour}>{hour}</option>;
+        })}
       </select>
 
       <label htmlFor='guests'>Number of guests</label>
