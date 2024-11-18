@@ -1,6 +1,6 @@
-import Form from "./Form";
 import { useState, useReducer } from "react";
 import BookingForm from "./BookingForm";
+import "./ReservationPage.css";
 
 export default function ReservationPage() {
   const [inputValue, setValue] = useState("");
@@ -58,16 +58,23 @@ export default function ReservationPage() {
   const [state, dispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
-    <main id='reservation-page' className='grid-3-system'>
-      <div className='wrapper'>
-        {/* <Form /> */}
-        <BookingForm
-          HandleChangeFunction={handleChange}
-          InputValue={inputValue}
-          handleSubmit={handleSubmit}
-          dispatch={dispatch}
-          availableTimes={state}
-        />
+    <main id='reservation-page'>
+      <div className='grid-3-system'>
+        <div className='header wrapper'>
+          <h2 className='h2 markazi'>Reservation</h2>
+        </div>
+      </div>
+
+      <div className='grid-3-system'>
+        <div className='wrapper'>
+          <BookingForm
+            HandleChangeFunction={handleChange}
+            InputValue={inputValue}
+            handleSubmit={handleSubmit}
+            dispatch={dispatch}
+            availableTimes={state}
+          />
+        </div>
       </div>
     </main>
   );
